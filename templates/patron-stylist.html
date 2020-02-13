@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+{% block title %}Patron{% endblock %}
+{% block body %}
+<h2>Home - Stylist</h2>
+
+<table style="width:100%">
+        <tr>
+            <td></td>
+            {% if dateList %}
+            {% for i in dateList%}
+            <td>{{ i }}</td>
+            {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>10:00-11:00</td>
+            {% if row10 %}
+                {% for i in row10 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index0, curtime = 10) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        <tr>
+            <td>11:00-12:00</td>
+            {% if row11 %}
+                {% for i in row11 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index0, curtime = 11) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>12:00-1:00</td>
+            {% if row12 %}
+                {% for i in row12 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index0, curtime = 12) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>1:00-2:00</td>
+            {% if row1 %}
+                {% for i in row1 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user, curstylist = cur_stylist, curdate = loop.index0, curtime = 1) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>2:00-3:00</td>
+            {% if row2 %}
+                {% for i in row2 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index0, curtime = 2) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>3:00-4:00</td>
+            {% if row3 %}
+                {% for i in row3 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index0, curtime = 3) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>4:00-5:00</td>
+            {% if row4 %}
+                {% for i in row4 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index0, curtime = 4) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>5:00-6:00</td>
+            {% if row5 %}
+                {% for i in row5 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index, curtime = 5) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>6:00-7:00</td>
+            {% if row6 %}
+                {% for i in row6 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index0, curtime = 6) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+        <tr>
+            <td>7:00-8:00</td>
+            {% if row7 %}
+                {% for i in row7 %}
+                {% if 'Available'==i %}
+                <td><a href="{{ url_for('book', curuser = g.user.id, curstylist = cur_stylist, curdate = loop.index0, curtime = 7) }}">{{ i }}</a></td>
+                {% else %}
+                <td>Unavailable</td>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+        </tr>
+    </table>
+{% endblock %}

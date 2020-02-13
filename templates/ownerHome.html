@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title%}
+Owner
+{% endblock %}
+
+{% block body %}
+
+<h2>Home - Owner</h2>
+
+<div class="navigation">
+    <a href="{{ url_for('registerStylist') }}">Register a stylist</a>
+</div>
+
+<p>Your stylists:</p>
+
+{% if stylistsList %}
+<ul>
+    {% for a in stylistsList %}
+    <li><a href="{{ url_for('stylistProfile', stylist_id = a.id) }}">{{ a.username }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}
