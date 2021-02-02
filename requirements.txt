@@ -1,6 +1,6 @@
 astroid==2.0.4
 backcall==0.1.0
-bleach==3.0.2
+bleach==3.3.0
 Click==7.0
 colorama==0.4.0
 decorator==4.3.0
